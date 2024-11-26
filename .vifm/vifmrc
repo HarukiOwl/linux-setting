@@ -4,25 +4,26 @@ set vicmd='! nvim'
 
 
 
-" 反対側にコピー
+
 nnoremap ff :copy
 
 
-"ｑで終了
+"ｑで終了"
 nnoremap q :quit<cr>
-" ディレクトリを作成する
+" ディレクトリを作成する"
 nnoremap K :mkdir<space>
 
-" 反対側のペインをカレントペインと同期する
+" 反対側のペインをカレントペインと同期する"
+
 nnoremap , :sync!<cr>
 
 
-"color
+"color"
 colorscheme palenight
 
 
 
-" Open Default Application
+" Open Default Application"
 nnoremap X :!explorer.exe %f&<cr>
 
 nnoremap F :file<cr>
@@ -53,7 +54,7 @@ set sizefmt=units:iec,precision:3
 set ignorecase
 set smartcase
 
-" Don't highlight search results automatically "
+" Dont highlight search results automatically "
 set nohlsearch
 
 " Use increment searching (search while typing)  "
@@ -75,7 +76,7 @@ set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 
 set history=100
 
-" What should be saved automatically between vifm runs
+" What should be saved automatically between vifm runs"
 " Like in previous versions of vifm
 " set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs
 " Like in vi
@@ -88,7 +89,7 @@ nnoremap , :sync!<cr>
 nnoremap o :sync!<cr>
 
 
-" Display sorting dialog
+" Display sorting dialog"
 nnoremap s :sort<cr>
 
 
@@ -97,7 +98,8 @@ nnoremap s :sort<cr>
 
 " 選択ファイルを他方のディレクトリに移動 "
 :com mv mv %f %D
-:com cp cp %f %D
+" いわゆる新しい方に合わすというやつ．反対側へコピー．上書きする場合は，元と先の内，新しい方が残る（コピー元が新しければ上書きするという意味）"
+:com cp cp --update=none %f %D
 
 " ブックマーク "
 :com cdd :cd /mnt/d
