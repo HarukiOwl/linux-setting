@@ -1,0 +1,17 @@
+name: simple
+channels:
+  - defaults
+dependencies:
+  - python=3.12.7
+  - pip
+  - pip:
+    - Flask
+    - opencv-python
+    - numpy
+    - pandas
+    - pillow
+    - glob2
+    - matplotlib
+    - scienceplots
+    - jupyter
+    - jupyterlab-language-pack-ja-JP

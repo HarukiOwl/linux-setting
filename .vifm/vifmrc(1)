@@ -1,0 +1,29 @@
+set timefmt=" %Y-%m-%d %H:%M"
+set statusline="  %t  [%T]%= %A %10u:%-7g %15s %20d [%a free]"
+set viewcolumns=-45%{name}..,-{ext},10{size},21{mtime}
+set sizefmt=units:iec,precision:3
+set vicmd='! nvim'
+
+
+" 反対側にコピー
+nnoremap ff :copy
+
+"ｑで終了
+nnoremap q :quit<cr>
+" ディレクトリを作成する
+nnoremap K :mkdir<space>
+
+" 反対側のペインをカレントペインと同期する
+nnoremap , :sync!<cr>
+
+
+"color
+colorscheme palenight
+
+
+" Open Default Application
+nnoremap X :!explorer.exe %f&<cr>
+
+nnoremap F :file<cr>
+
+filetype *.pdf wslview %c

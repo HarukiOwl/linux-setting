@@ -1,0 +1,13 @@
+/mnt/d
+
+~/.vifm
+
+
+
+/mnt/d/gdrive-local/LAB
+
+/mnt/d/gdrive-local/scan
+
+/mnt/d/gdrive-local/LAB/result-gdrive
+
+

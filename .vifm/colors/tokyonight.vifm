@@ -1,0 +1,62 @@
+" 全てのスタイルをリセット
+highlight clear
+
+" ボーダーの色設定（変更なし）
+highlight Border	cterm=none	ctermfg=default	ctermbg=default
+
+" 上部の境界線の色設定（変更なし）
+highlight TopLine	cterm=none	ctermfg=002	ctermbg=default
+highlight TopLineSel	cterm=bold	ctermfg=002	ctermbg=default
+
+" ウィンドウの背景色設定（変更なし）
+highlight Win ctermfg=007 ctermbg=004
+" ディレクトリの色設定（tokyonightの青に近似）
+highlight Directory	cterm=bold	ctermfg=033	ctermbg=default  " 元はctermfg=004
+
+" 現在行の色設定（変更なし）
+highlight CurrLine	cterm=bold,inverse	ctermfg=1	ctermbg=7
+
+" それ以外の行の色設定（変更なし）
+highlight OtherLine	cterm=bold	ctermfg=default	ctermbg=default
+
+" 選択行の色設定（tokyonightの紫に近似）
+highlight Selected	cterm=none	ctermfg=099	ctermbg=008  " 元はctermfg=003
+
+" ジョブ行の色設定（変更なし）
+highlight JobLine	cterm=bold	ctermfg=251	ctermbg=008
+
+" ステータス行の色設定（変更なし）
+highlight StatusLine	cterm=none	ctermfg=008	ctermbg=default
+
+" エラーメッセージの色設定（変更なし）
+highlight ErrorMsg	cterm=bold	ctermfg=001	ctermbg=default
+
+" ワイルドメニューの色設定（変更なし）
+highlight WildMenu	cterm=bold	ctermfg=015	ctermbg=008
+
+" コマンドラインの色設定（変更なし）
+highlight CmdLine	cterm=none	ctermfg=007	ctermbg=default
+
+" 実行可能ファイルの色設定（変更なし）
+highlight Executable	cterm=bold	ctermfg=002	ctermbg=default
+
+" リンクの色設定（tokyonightの青緑に近似）
+highlight Link		cterm=bold	ctermfg=082	ctermbg=default  " 元はctermfg=006
+
+" リンク切れの色設定（変更なし）
+highlight BrokenLink	cterm=bold	ctermfg=001	ctermbg=default
+
+" デバイスの色設定（変更なし）
+highlight Device	cterm=bold,standout	ctermfg=000	ctermbg=011
+
+" FIFOの色設定（変更なし）
+highlight Fifo		cterm=none	ctermfg=003	ctermbg=default
+
+" ソケットの色設定（変更なし）
+highlight Socket	cterm=bold	ctermfg=005	ctermbg=default
+
+"https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors/moon.lua
+
+
+
+

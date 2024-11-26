@@ -1,0 +1,130 @@
+"https://pc.oreda.net/software/filer/vifm
+
+set vicmd='! nvim'
+
+
+
+" 反対側にコピー
+nnoremap ff :copy
+
+
+"ｑで終了
+nnoremap q :quit<cr>
+" ディレクトリを作成する
+nnoremap K :mkdir<space>
+
+" 反対側のペインをカレントペインと同期する
+nnoremap , :sync!<cr>
+
+
+"color
+colorscheme palenight
+
+
+
+" Open Default Application
+nnoremap X :!explorer.exe %f&<cr>
+
+nnoremap F :file<cr>
+
+filetype *.pdf wslview %c
+
+filetype *.JPG feh
+filetype *.tif feh
+filetype *.png feh 
+
+
+
+
+" show hiddden files in both panes "
+windo normal zo
+
+" set confirm -=delete,permdelete  "
+
+set viewcolumns=-45%{name}..,5{ext},10{size},21{mtime}
+set timefmt=" %Y-%m-%d %H:%M:%S "
+
+set statusline="  %t  [%T]%= %A %10u:%-7g %15s %20d [%a free]"
+set sizefmt=units:iec,precision:3
+
+
+" Ignore case in search patterns unless it contains at least one uppercase  "
+" letter "
+set ignorecase
+set smartcase
+
+" Don't highlight search results automatically "
+set nohlsearch
+
+" Use increment searching (search while typing)  "
+set incsearch
+
+" set line number  "
+set number
+
+
+" show list of matches on tab complition in command-line mode "
+set wildmenu
+
+" use popup window instead of a single line for completion "
+set wildstyle=popup
+
+" show suggestions "
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
+
+
+set history=100
+
+" What should be saved automatically between vifm runs
+" Like in previous versions of vifm
+" set vifminfo=options,filetypes,commands,bookmarks,dhistory,state,cs
+" Like in vi
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+
+" Synchronize the opposite pane with the current pane "
+nnoremap , :sync!<cr>
+nnoremap o :sync!<cr>
+
+
+" Display sorting dialog
+nnoremap s :sort<cr>
+
+
+" スペースキーを「カレントファイルを選択して、カーソルを1つ下に移動」にする "
+"nnoremap <space> t<down>
+
+" 選択ファイルを他方のディレクトリに移動 "
+:com mv mv %f %D
+:com cp cp %f %D
+
+" ブックマーク "
+:com cdd :cd /mnt/d
+:com cdh :cd
+:com cdlab :cd /mnt/d/gdrive-local/LAB
+
+
+:com cheat vi ~/.vifm/cheart.txt
+
+
+" Faster renaming
+nnoremap I cw<c-a>
+nnoremap C cw<c-u>
+nnoremap A cw
+
+
+
+
+"fzf の場合"
+command bookmark :execute 'cd "'.term('cat ~/.vifm/bookmark.txt | fzf 2>/dev/tty | sed "s/:.*//" ').'"'
+nnoremap b :bookmark<cr>
+
+
+
+
+
+
+
+
+
