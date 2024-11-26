@@ -3,7 +3,6 @@ set termguicolors                                       " トゥルーカラー�
 "これは一番上じゃないとバグります"
 
 set clipboard=unnamedplus
-
 set clipboard^=unnamed
 set clipboard+=unnamedplus
 
